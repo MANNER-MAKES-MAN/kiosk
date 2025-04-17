@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+
+<HBox alignment="CENTER" prefHeight="480.0" prefWidth="800.0" spacing="50.0"
+      xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="app.TypeSelectController">
+    <padding>
+        <Insets bottom="100.0" left="50.0" right="50.0" top="100.0" />
+    </padding>
+    <children>
+        <Button fx:id="storeButton" prefHeight="300.0" prefWidth="300.0"
+                style="-fx-font-size: 24px; -fx-font-family: Inter; -fx-font-weight: bold;
+                       -fx-background-color: white; -fx-background-radius: 30;
+                       -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 4, 0, 1, 1);"
+                text="매장" />
+        <Button fx:id="takeoutButton" prefHeight="300.0" prefWidth="300.0"
+                style="-fx-font-size: 24px; -fx-font-family: Inter; -fx-font-weight: bold;
+                       -fx-background-color: white; -fx-background-radius: 30;
+                       -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 4, 0, 1, 1);"
+                text="포장" />
+    </children>
+</HBox>
