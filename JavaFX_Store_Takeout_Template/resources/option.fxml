@@ -19,27 +19,27 @@
     </ImageView>
 
     <!-- MENU 텍스트 -->
-    <Button fx:id="goBackButton" layoutX="27.0" layoutY="19.0" onAction="#gbClicked" prefHeight="14.0" prefWidth="67.0" style="-fx-font-size: 20px; -fx-font-family: 'Inter';" text="이전" />
+    <Button fx:id="goBackButton" layoutX="27.0" layoutY="19.0" onAction="#gbClicked" prefHeight="14.0" prefWidth="67.0" style="-fx-font-size: 20px; -fx-font-family: 'NanumGothic';" text="이전" />
 
     <!-- 오른쪽 구성 영역 -->
     <AnchorPane layoutX="294.0" layoutY="29.0" prefHeight="444" prefWidth="506">
 
         <!-- 커피 이름 -->
-        <Label layoutX="11" layoutY="3" style="-fx-font-size: 80px; -fx-font-family: 'Katibeh'; -fx-letter-spacing: 2.4px;" text="Americano" />
+        <Label layoutX="11" layoutY="3" style="-fx-font-size: 80px; -fx-font-family: 'NanumGothic'; -fx-letter-spacing: 2.4px;" text="Americano" />
 
         <!-- SIZE, EXTRA, MILK TYPE 등 -->
-        <Label layoutX="88.0" layoutY="85.0" style="-fx-font-size: 20px; -fx-font-family: 'Inika'; -fx-text-fill: #8E7777;" text="SIZE" />
-        <Label layoutX="88.0" layoutY="203.0" style="-fx-font-size: 20px; -fx-font-family: 'Inika'; -fx-text-fill: #8E7777;" text="EXTRA" />
-        <Label layoutX="88.0" layoutY="279.0" style="-fx-font-size: 20px; -fx-font-family: 'Inika'; -fx-text-fill: #8E7777;" text="MILK TYPE" />
+        <Label layoutX="88.0" layoutY="85.0" style="-fx-font-size: 20px; -fx-font-family: 'NanumGothic'; -fx-text-fill: #8E7777;" text="SIZE" />
+        <Label layoutX="88.0" layoutY="203.0" style="-fx-font-size: 20px; -fx-font-family:'NanumGothic'; -fx-text-fill: #8E7777;" text="EXTRA" />
+        <Label layoutX="88.0" layoutY="279.0" style="-fx-font-size: 20px; -fx-font-family: 'NanumGothic'; -fx-text-fill: #8E7777;" text="MILK TYPE" />
 
         <!-- 예: SHORT, TALL 등 크기 선택 -->
-         <Label fx:id="shortLabel" layoutX="109" layoutY="181" onMouseClicked="#sizeClicked" style="-fx-font-size: 14px; -fx-font-family: 'Inika'; -fx-text-fill: #4F4F4F;" text="SHORT" />
+         <Label fx:id="shortLabel" layoutX="109" layoutY="181" onMouseClicked="#sizeClicked" style="-fx-font-size: 14px; -fx-font-family: 'NanumGothic'; -fx-text-fill: #4F4F4F;" text="SHORT" />
 
-         <Label fx:id="tallLabel" layoutX="214" layoutY="181" onMouseClicked="#sizeClicked" style="-fx-font-size: 14px; -fx-font-family: 'Inika'; -fx-text-fill: #D9D9D9;" text="TALL" />
+         <Label fx:id="tallLabel" layoutX="214" layoutY="181" onMouseClicked="#sizeClicked" style="-fx-font-size: 14px; -fx-font-family: 'NanumGothic'; -fx-text-fill: #D9D9D9;" text="TALL" />
 
-         <Label fx:id="grandeLabel" layoutX="300" layoutY="181" onMouseClicked="#sizeClicked" style="-fx-font-size: 14px; -fx-font-family: 'Inika'; -fx-text-fill: #D9D9D9;" text="GRANDE" />
+         <Label fx:id="grandeLabel" layoutX="300" layoutY="181" onMouseClicked="#sizeClicked" style="-fx-font-size: 14px; -fx-font-family: 'NanumGothic'; -fx-text-fill: #D9D9D9;" text="GRANDE" />
 
-         <Label fx:id="ventiLabel" layoutX="407" layoutY="181" onMouseClicked="#sizeClicked" style="-fx-font-size: 14px; -fx-font-family: 'Inika'; -fx-text-fill: #D9D9D9;" text="VENTI" />
+         <Label fx:id="ventiLabel" layoutX="407" layoutY="181" onMouseClicked="#sizeClicked" style="-fx-font-size: 14px; -fx-font-family: 'NanumGothic'; -fx-text-fill: #D9D9D9;" text="VENTI" />
 
 
         <Pane fx:id="shortChoice" layoutX="95.0" layoutY="120.0" onMouseClicked="#sizeClicked" prefHeight="50.0" prefWidth="76" style="-fx-background-color: #D9D9D9; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-color: black; -fx-border-width: 1;">

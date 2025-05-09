@@ -42,7 +42,7 @@ public class OrderController {
     @FXML
     private void handleOptionClick(MouseEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("option.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/option.fxml"));
             Parent popupRoot = loader.load();
 
             Stage popupStage = new Stage();

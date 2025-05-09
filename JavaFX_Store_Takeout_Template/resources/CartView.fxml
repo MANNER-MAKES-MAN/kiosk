@@ -9,16 +9,16 @@
    <children>
 
        <!-- 상단 텍스트 -->
-       <Label layoutX="20" layoutY="23" style="-fx-font-size: 20px; -fx-font-family: Inter; -fx-font-weight: bold;" text="담긴 메뉴" />
+       <Label layoutX="20" layoutY="23" style="-fx-font-size: 20px; -fx-font-family: 'NanumGothic'; -fx-font-weight: normal;" text="담긴 메뉴" />
 
        <!-- 구분선 -->
        <Label layoutX="-20" layoutY="387" style="-fx-font-size: 20px; -fx-font-weight: 100; -fx-text-fill: black;" text="_______________________________________________________________________________________________" />
 
        <!-- 닫기 버튼 -->
-       <Button fx:id="closeButton" layoutX="15" layoutY="424" prefHeight="39" prefWidth="84" style="-fx-font-size: 24px; -fx-font-family: Inter; -fx-font-weight: bold;                       -fx-background-color: white; -fx-background-radius: 30;                       -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 4, 0, 1, 1);" text="닫기" />
+       <Button fx:id="closeButton" layoutX="15" layoutY="424" prefHeight="39" prefWidth="84" style="-fx-font-size: 24px; -fx-font-family: 'NanumGothic'; -fx-font-weight: normal;                       -fx-background-color: white; -fx-background-radius: 30;                       -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 4, 0, 1, 1);" text="닫기" />
 
        <!-- 다음 버튼 -->
-       <Button fx:id="nextButton" layoutX="702.0" layoutY="422.0" prefHeight="39" prefWidth="84" style="-fx-font-size: 24px; -fx-font-family: Inter; -fx-font-weight: bold;                       -fx-background-color: white; -fx-background-radius: 30;                       -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 4, 0, 1, 1);" text="다음" />
+       <Button fx:id="nextButton" layoutX="702.0" layoutY="422.0" prefHeight="39" prefWidth="84" style="-fx-font-size: 24px; -fx-font-family: 'NanumGothic'; -fx-font-weight:normal;                       -fx-background-color: white; -fx-background-radius: 30;                       -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 4, 0, 1, 1);" text="다음" />
 
        <!-- 스크롤 가능 장바구니 항목 목록 -->
        <ScrollPane layoutX="20" layoutY="70" prefHeight="300" prefWidth="760">
