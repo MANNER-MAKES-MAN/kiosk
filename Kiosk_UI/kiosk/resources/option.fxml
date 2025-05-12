@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="480" prefWidth="800" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.OptionController">
+    
+    <!-- 왼쪽 이미지 -->
+    <ImageView fitHeight="268" fitWidth="238" layoutX="52" layoutY="109" style="-fx-effect: dropshadow(gaussian, rgba(31,16,16,0.35), 10, 0, 0, 4);">
+        <image>
+            <Image url="@pictures/Esopresso.png" />
+        </image>
+    </ImageView>
+
+    <!-- MENU 텍스트 -->
+    <Button fx:id="goBackButton" layoutX="27.0" layoutY="19.0" onAction="#gbClicked" prefHeight="14.0" prefWidth="67.0" style="-fx-font-size: 20px; -fx-font-family: 'NanumGothic';" text="이전" />
+
+    <!-- 오른쪽 구성 영역 -->
+    <AnchorPane layoutX="294.0" layoutY="29.0" prefHeight="444" prefWidth="506">
+
+        <!-- 커피 이름 -->
+        <Label layoutX="11" layoutY="3" style="-fx-font-size: 80px; -fx-font-family: 'NanumGothic'; -fx-letter-spacing: 2.4px;" text="Americano" />
+
+        <!-- SIZE, EXTRA, MILK TYPE 등 -->
+        <Label layoutX="88.0" layoutY="85.0" style="-fx-font-size: 20px; -fx-font-family: 'NanumGothic'; -fx-text-fill: #8E7777;" text="SIZE" />
+        <Label layoutX="88.0" layoutY="203.0" style="-fx-font-size: 20px; -fx-font-family:'NanumGothic'; -fx-text-fill: #8E7777;" text="EXTRA" />
+        <Label layoutX="88.0" layoutY="279.0" style="-fx-font-size: 20px; -fx-font-family: 'NanumGothic'; -fx-text-fill: #8E7777;" text="MILK TYPE" />
+
+        <!-- 예: SHORT, TALL 등 크기 선택 -->
+         <Label fx:id="shortLabel" layoutX="109" layoutY="181" onMouseClicked="#sizeClicked" style="-fx-font-size: 14px; -fx-font-family: 'NanumGothic'; -fx-text-fill: #4F4F4F;" text="SHORT" />
+
+         <Label fx:id="tallLabel" layoutX="214" layoutY="181" onMouseClicked="#sizeClicked" style="-fx-font-size: 14px; -fx-font-family: 'NanumGothic'; -fx-text-fill: #D9D9D9;" text="TALL" />
+
+         <Label fx:id="grandeLabel" layoutX="300" layoutY="181" onMouseClicked="#sizeClicked" style="-fx-font-size: 14px; -fx-font-family: 'NanumGothic'; -fx-text-fill: #D9D9D9;" text="GRANDE" />
+
+         <Label fx:id="ventiLabel" layoutX="407" layoutY="181" onMouseClicked="#sizeClicked" style="-fx-font-size: 14px; -fx-font-family: 'NanumGothic'; -fx-text-fill: #D9D9D9;" text="VENTI" />
+
+
+        <Pane fx:id="shortChoice" layoutX="95.0" layoutY="120.0" onMouseClicked="#sizeClicked" prefHeight="50.0" prefWidth="76" style="-fx-background-color: #D9D9D9; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-color: black; -fx-border-width: 1;">
+         <children>
+            <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="20.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pictures/CupSize.png" />
+               </image>
+            </ImageView>
+            
+         </children>
+         </Pane>
+
+           
+      <Pane fx:id="tallChoice" layoutX="193.0" layoutY="120.0" onMouseClicked="#sizeClicked" prefHeight="50.0" prefWidth="76" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-color: #D9D9D9; -fx-border-width: 1;">
+         <children>
+            <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="21.0" layoutY="8.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pictures/CupSize.png" />
+               </image>
+            </ImageView>
+            
+         </children>
+         </Pane>
+      
+      <Pane fx:id="ventiChoice" layoutX="389.0" layoutY="120.0" onMouseClicked="#sizeClicked" prefHeight="50.0" prefWidth="76" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-color: #D9D9D9; -fx-border-width: 1;">
+         <children>
+            <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="21.0" layoutY="8.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pictures/CupSize.png" />
+               </image>
+            </ImageView>
+            
+         </children>
+      </Pane>
+
+      <Pane fx:id="grandeChoice" layoutX="291.0" layoutY="120.0" onMouseClicked="#sizeClicked" prefHeight="50.0" prefWidth="76" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-color: #D9D9D9; -fx-border-width: 1;">
+         <children>
+            <ImageView fitHeight="34.0" fitWidth="34.0" layoutX="21.0" layoutY="8.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pictures/CupSize.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+
+        <!-- 주문하기 버튼 -->
+        <Button layoutX="360.0" layoutY="356" prefHeight="71.0" prefWidth="129.0" style="-fx-background-color: #D76751; -fx-text-fill: white; -fx-font-family: 'Inika'; -fx-font-size: 20px; -fx-background-radius: 30; -fx-border-color: #F5F5F5;" text="확인&#10;(Confirm)" textAlignment="CENTER" />
+
+        <!-- 가격 -->
+        <Label alignment="CENTER_RIGHT" layoutX="88.0" layoutY="353.0" style="-fx-font-size: 32px; -fx-font-family: 'Inika';" text="4,500won" />
+      
+
+      <!-- EXTRA -->
+      <Pane fx:id="sugarChoice" layoutX="94.0" layoutY="236.0" onMouseClicked="#extraClicked" prefHeight="28.0" prefWidth="94.0" style="-fx-background-color: #D9D9D9; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-color: black; -fx-border-width: 1;">
+         <children>
+            <Label layoutX="23.0" layoutY="7.0" style="-fx-font-size: 14px; -fx-font-family: 'Inika'; -fx-text-fill: #4F4F4F;" text="SUGAR" />
+         </children>
+      </Pane>
+      <Pane fx:id="milkChoice" layoutX="199.0" layoutY="236.0" onMouseClicked="#extraClicked" prefHeight="28.0" prefWidth="94.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-color: #D9D9D9; -fx-border-width: 1;">
+         <children>
+            <Label layoutX="30.0" layoutY="7.0" style="-fx-font-size: 14px; -fx-font-family: 'Inika'; -fx-text-fill: #D9D9D9;" text="MILK" textAlignment="CENTER" />
+         </children>
+      </Pane>
+
+
+      <!-- MILK TYPE -->
+      <Pane fx:id="milkType" layoutX="76.0" layoutY="306.0" prefHeight="42.0" prefWidth="363.0">
+         <children>
+            <Pane fx:id="amChoice" layoutX="227.0" layoutY="7.0" onMouseClicked="#milkTypeClicked" prefHeight="28.0" prefWidth="114.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-color: #D9D9D9; -fx-border-width: 1;">
+               <children>
+                  <Label layoutX="13.0" layoutY="7.0" style="-fx-font-size: 14px; -fx-font-family: 'Inika'; -fx-text-fill: #D9D9D9;" text="AMOND MILK" />
+               </children>
+            </Pane>
+
+            <Pane fx:id="smChoice" layoutX="124.0" layoutY="7.0" onMouseClicked="#milkTypeClicked" prefHeight="28.0" prefWidth="94.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-color: #D9D9D9; -fx-border-width: 1;">
+               <children>
+                  <Label layoutX="13.0" layoutY="7.0" style="-fx-font-size: 14px; -fx-font-family: 'Inika'; -fx-text-fill: #D9D9D9;" text="SOY MILK" />
+               </children>
+            </Pane>
+      
+            <Pane fx:id="omChoice" layoutX="20.0" layoutY="7.0" onMouseClicked="#milkTypeClicked" prefHeight="28.0" prefWidth="94.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 30; -fx-border-radius: 30; -fx-border-color: #D9D9D9; -fx-border-width: 1;">
+               <children>
+                  <Label layoutX="13.0" layoutY="7.0" style="-fx-font-size: 14px; -fx-font-family: 'Inika'; -fx-text-fill: #D9D9D9;" text="OAT MILK" textAlignment="CENTER" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <TextField alignment="CENTER" layoutX="269.0" layoutY="357.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="28.0" prefWidth="43.0" text="1">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Button layoutX="239.0" layoutY="360.0" mnemonicParsing="false" text="-">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button contentDisplay="CENTER" layoutX="315.0" layoutY="360.0" mnemonicParsing="false" text="+">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+
+    </AnchorPane>
+</AnchorPane>
