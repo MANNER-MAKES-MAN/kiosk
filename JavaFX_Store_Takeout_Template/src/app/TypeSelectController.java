@@ -1,16 +1,19 @@
 package app;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.fxml.FXMLLoader;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -31,7 +34,7 @@ public class TypeSelectController {
         storeButton.setOnAction(e -> switchToMenu());
         takeoutButton.setOnAction(e -> switchToMenu());
 
-        voiceTestButton.setOnAction(e -> handleVoiceTest());
+//        voiceTestButton.setOnAction(e -> handleVoiceTest());
     }
 
     private void switchToMenu() {
@@ -77,20 +80,25 @@ public class TypeSelectController {
         }
     }
     @FXML
-    private void voiceClicked(MouseEvent event) {
+    private void voiceClicked(ActionEvent event) {
     	try {
-//    		 // 음성 인식 파이썬 스크립트 실행(일단 주석 처리함)
-//            ProcessBuilder pb = new ProcessBuilder("python", "voice_test.py");
-//            pb.redirectErrorStream(true);
-//            Process process = pb.start();
-//
-//            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-//            StringBuilder result = new StringBuilder();
-//            String line;
-    		
-    		
-            // 1. 음성 인식 결과 받아오기 (테스트용 임시 텍스트 사용)
-            String recognizedText = "아메리카노 한잔";  // 예: 음성인식 결과
+    		// 1. 음성 인식 스크립트 실행
+    		ProcessBuilder pb = new ProcessBuilder("python", "voice_test.py");
+    		pb.redirectErrorStream(true);
+    		Process process = pb.start();
+    		process.waitFor();  // 파이썬 종료까지 대기
+
+    		// 2. 텍스트 파일에서 결과 읽기
+    		File resultFile = new File("recognized_text.txt");
+    		if (!resultFile.exists()) {
+    		    System.out.println("인식 결과 파일이 없습니다.");
+    		    return;
+    		}
+
+    		BufferedReader reader = new BufferedReader(new FileReader(resultFile, StandardCharsets.UTF_8));
+    		String recognizedText = reader.readLine();
+    		reader.close();
+
             System.out.println("인식된 텍스트: " + recognizedText);
 
             // 2. 단어 단위로 분해 (공백 기준)
