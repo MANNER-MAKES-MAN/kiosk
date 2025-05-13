@@ -10,47 +10,47 @@
 <AnchorPane prefHeight="480.0" prefWidth="800.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.OrderController">
 
     <!-- 상단 텍스트 -->
-    <Label layoutX="382.0" layoutY="15.0" style="-fx-font-size: 20px; -fx-text-fill: black;" text="주문 내역 확인" />
-    <Label accessibleRole="BUTTON" layoutX="27.0" layoutY="15.0" style="-fx-font-size: 20px; -fx-text-fill: black;" text="MENU" />
+    <Label layoutX="382.0" layoutY="15.0" style="-fx-font-size: 20px; -fx-font-family: 'NanumGothic'; -fx-text-fill: black;" text="주문 내역 확인" />
+    <Label accessibleRole="BUTTON" layoutX="27.0" layoutY="15.0" style="-fx-font-size: 20px; -fx-font-family: 'NanumGothic'; -fx-text-fill: black;" text="MENU" />
 
     <!-- 왼쪽 포스터 영역 -->
     <Rectangle fill="#D9D9D9" height="397" layoutX="27" layoutY="58" width="300" />
-    <Label layoutX="128" layoutY="245" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: black;" text="포스터 사진" />
+    <Label layoutX="128" layoutY="245" style="-fx-font-size: 20px; -fx-font-family: 'NanumGothic'; -fx-font-weight: bold; -fx-text-fill: black;" text="포스터 사진" />
 
     <ScrollPane layoutX="347" layoutY="53" prefHeight="288" prefWidth="439">
     <AnchorPane fx:id="orderPane" prefHeight="288" prefWidth="439">
         <Rectangle fill="#D9D9D9" height="47" layoutX="10" layoutY="5" width="399.0" />
         <Rectangle fill="#D9D9D9" height="47" layoutX="10" layoutY="189" width="393" />
    
-        <Label layoutX="28" layoutY="15" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: black;" text="주문 내역" />
-        <Label layoutX="28" layoutY="199" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #4F4F4F;" text="결제 금액" />
-        <Label layoutX="242" layoutY="15" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: black;" text="수량" />
-        <Label layoutX="343" layoutY="15" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: black;" text="금액" />
-        <Label layoutX="317" layoutY="202" style="-fx-font-size: 18px; -fx-text-fill: #4F4F4F;" text="10,200원" />
+        <Label layoutX="28" layoutY="15" style="-fx-font-size: 22px; -fx-font-family: 'NanumGothic'; -fx-font-weight: bold; -fx-text-fill: black;" text="주문 내역" />
+        <Label layoutX="28" layoutY="199" style="-fx-font-size: 22px; -fx-font-family: 'NanumGothic'; -fx-font-weight: bold; -fx-text-fill: #4F4F4F;" text="결제 금액" />
+        <Label layoutX="242" layoutY="15" style="-fx-font-size: 22px; -fx-font-family: 'NanumGothic'; -fx-font-weight: bold; -fx-text-fill: black;" text="수량" />
+        <Label layoutX="343" layoutY="15" style="-fx-font-size: 22px; -fx-font-family: 'NanumGothic'; -fx-font-weight: bold; -fx-text-fill: black;" text="금액" />
+        <Label layoutX="317" layoutY="202" style="-fx-font-size: 18px; -fx-font-family: 'NanumGothic'; -fx-text-fill: #4F4F4F;" text="10,200원" />
          <Pane layoutX="10.0" layoutY="52.0" prefHeight="40.0" prefWidth="412.0">
             <children>
-              <Label alignment="CENTER_RIGHT" layoutX="303.0" layoutY="10.0" style="-fx-font-size: 18px; -fx-text-fill: black;" text="10,200원" />
+              <Label alignment="CENTER_RIGHT" layoutX="303.0" layoutY="10.0" style="-fx-font-size: 18px; -fx-font-family: 'NanumGothic'; -fx-text-fill: black;" text="10,200원" />
          
-              <Label layoutX="22.0" layoutY="7.0" prefHeight="22.0" prefWidth="87.0" style="-fx-font-size: 20px; -fx-text-fill: black;" text="주문 번호" />
+              <Label layoutX="22.0" layoutY="7.0" prefHeight="22.0" prefWidth="87.0" style="-fx-font-size: 20px; -fx-font-family: 'NanumGothic'; -fx-text-fill: black;" text="주문 번호" />
                <Group fx:id="optionBtn" layoutX="150.0" layoutY="5.0" onMouseClicked="#handleOptionClick">
                   <children>
                
                     <!-- 수량 조절 영역 -->
                     <Rectangle fill="#D9D9D9" height="29" width="52" />
-                    <Label layoutX="7.0" layoutY="3.0" style="-fx-font-size: 20px; -fx-text-fill: black;" text="옵션" />
+                    <Label layoutX="7.0" layoutY="3.0" style="-fx-font-size: 20px; -fx-font-family: 'NanumGothic'; -fx-text-fill: black;" text="옵션" />
                   </children>
                </Group>
          
               <!-- - 버튼 -->
               <Rectangle fill="#D9D9D9" height="15" layoutX="216.0" layoutY="12.0" width="15" />
-              <Label fx:id="decreaseBtn" accessibleRole="BUTTON" layoutX="218.0" layoutY="9.0" onMouseClicked="#handleDecrease" style="-fx-font-size: 20px; -fx-text-fill: black;" text="-" />
+              <Label fx:id="decreaseBtn" accessibleRole="BUTTON" layoutX="218.0" layoutY="9.0" onMouseClicked="#handleDecrease" style="-fx-font-size: 20px; -fx-font-family: 'NanumGothic'; -fx-text-fill: black;" text="-" />
          
               <!-- + 버튼 -->
               <Rectangle fill="#D9D9D9" height="15" layoutX="278.0" layoutY="12.0" width="15" />
-              <Label fx:id="increaseBtn" accessibleRole="BUTTON" layoutX="279.0" layoutY="9.0" onMouseClicked="#handleIncrease" style="-fx-font-size: 20px; -fx-text-fill: black;" text="+" />
+              <Label fx:id="increaseBtn" accessibleRole="BUTTON" layoutX="279.0" layoutY="9.0" onMouseClicked="#handleIncrease" style="-fx-font-size: 20px; -fx-font-family: 'NanumGothic'; -fx-text-fill: black;" text="+" />
          
               <!-- 수량 표시 -->
-              <Label fx:id="quantityLabel" alignment="CENTER_RIGHT" layoutX="234.0" layoutY="9.0" prefHeight="21.0" prefWidth="41.0" style="-fx-font-size: 18px; -fx-text-fill: black;" text="1개" />
+              <Label fx:id="quantityLabel" alignment="CENTER_RIGHT" layoutX="234.0" layoutY="9.0" prefHeight="21.0" prefWidth="41.0" style="-fx-font-size: 18px; -fx-font-family: 'NanumGothic'; -fx-text-fill: black;" text="1개" />
             </children>
          </Pane>
     </AnchorPane>
@@ -62,16 +62,16 @@
          <children>
               <Rectangle accessibleRole="BUTTON" fill="#D9D9D9" height="110" width="190" />
       
-                    <Label layoutX="13.0" layoutY="8.0" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: black;" text="카드 결제" />
+                    <Label layoutX="13.0" layoutY="8.0" style="-fx-font-size: 22px; -fx-font-family: 'NanumGothic'; -fx-font-weight: bold; -fx-text-fill: black;" text="카드 결제" />
       
-                    <Label layoutX="13.0" layoutY="90.0" style="-fx-font-size: 11px; -fx-font-weight: bold; -fx-text-fill: black;" text="신용 카드/삼성 페이" />
+                    <Label layoutX="13.0" layoutY="90.0" style="-fx-font-size: 11px; -fx-font-family: 'NanumGothic'; -fx-font-weight: bold; -fx-text-fill: black;" text="신용 카드/삼성 페이" />
          </children>
       </Pane>
       <Pane fx:id="simplePayment" layoutX="210.0" layoutY="6.0" onMouseClicked="#spClicked">
          <children>
               <Rectangle accessibleRole="BUTTON" fill="#D9D9D9" height="110" width="190" />
-              <Label layoutX="13.0" layoutY="8.0" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: black;" text="간편 결제" />
-              <Label layoutX="13.0" layoutY="66.0" style="-fx-font-size: 11px; -fx-font-weight: bold; -fx-text-fill: black;" text="네이버 페이 / 카카오 페이 /&#10;제로 페이 / SSG 페이 /&#10;L 페이 / 앱 카드 그 외" />
+              <Label layoutX="13.0" layoutY="8.0" style="-fx-font-size: 22px; -fx-font-family: 'NanumGothic'; -fx-font-weight: bold; -fx-text-fill: black;" text="간편 결제" />
+              <Label layoutX="13.0" layoutY="66.0" style="-fx-font-size: 11px; -fx-font-family: 'NanumGothic'; -fx-font-weight: bold; -fx-text-fill: black;" text="네이버 페이 / 카카오 페이 /&#10;제로 페이 / SSG 페이 /&#10;L 페이 / 앱 카드 그 외" />
          </children>
       </Pane>
     </AnchorPane>

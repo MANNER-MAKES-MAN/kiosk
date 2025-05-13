@@ -16,6 +16,7 @@ public class CartController {
 
     @FXML private Button closeButton;
     @FXML private VBox cartVBox;
+    @FXML private Button nextButton;
 
     @FXML
     public void initialize() {
@@ -36,7 +37,7 @@ public class CartController {
 
             // 메뉴 이름
             Label nameLabel = new Label(item.getName());
-            nameLabel.setStyle("-fx-font-size: 18px;");
+            nameLabel.setStyle("-fx-font-size: 18px;  -fx-font-family: 'NanumGothic';");
 
             // 수량 조절 버튼 및 라벨
             Button minus = new Button("-");
@@ -65,6 +66,7 @@ public class CartController {
 
         // 닫기 버튼 누르면 메뉴 화면으로 전환
         closeButton.setOnAction(e -> switchToMenuView());
+        nextButton.setOnAction(e -> switchToPaymentView());
     }
 
     private void switchToMenuView() {
@@ -76,4 +78,14 @@ public class CartController {
             e.printStackTrace();
         }
     }
+
+    private void switchToPaymentView() {
+    try {
+        Parent root = FXMLLoader.load(getClass().getResource("/payment.fxml"));
+        Stage stage = (Stage) nextButton.getScene().getWindow();
+        stage.setScene(new Scene(root));
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
+}
 }
