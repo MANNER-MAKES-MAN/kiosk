@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+
+<HBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml" fx:controller="app.OrderItemController"
+      spacing="10" prefHeight="40" prefWidth="420" style="-fx-padding: 5px;">
+    
+    <!-- 메뉴 이름 -->
+    <Label fx:id="menuNameLabel" prefWidth="120" style="-fx-font-size: 16px;" />
+
+    <!-- 옵션 -->
+    <Pane fx:id="optionBtn" onMouseClicked="#handleOptionClick">
+        <children>
+            <Rectangle width="50" height="20" fill="lightgray"/>
+            <Label text="옵션" layoutX="7" layoutY="2"/>
+        </children>
+    </Pane>
+
+    <!-- 수량 조절 -->
+    <Button fx:id="minusBtn" text="-" />
+    <Label fx:id="quantityLabel" text="1개" />
+    <Button fx:id="plusBtn" text="+" />
+
+    <!-- 가격 -->
+    <Label fx:id="priceLabel" prefWidth="80" style="-fx-alignment: CENTER-RIGHT; -fx-font-size: 14px;" />
+</HBox>
