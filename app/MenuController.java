@@ -47,13 +47,13 @@ public class MenuController {
     for (CartItem item : cartItems) {
         if (item.getName().equals(name)) {
             item.increaseQuantity();
-            System.out.println("수량 증가됨: " + name);
+            System.out.println("수량 증가됨: " + name); // 똑같은 메뉴를 한 번 더 눌렀을 때 '수량 증가됨:menu' 출력
             return;
         }
     }
     cartItems.add(new CartItem(name, imagePath, price));
     System.out.println("장바구니에 새로 추가됨: " + name);
-    }
+    } // 메뉴 클릭하면 장바구니에 추가
 
     private void switchScene(String fxmlPath) {
         try {
