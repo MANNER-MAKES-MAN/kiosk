@@ -1,5 +1,7 @@
 package app;
 
+import static app.MenuController.cartItems;
+
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -41,22 +43,33 @@ public class CartController {
 
             // 수량 조절 버튼 및 라벨
             Button minus = new Button("-");
-            Label countLabel = new Label("1");
+            Label countLabel = new Label(String.valueOf(item.getQuantity())) ; // 장바구니에서 수량조절하는대로 숫자 바뀜 1로 고정된 거 x
             Button plus = new Button("+");
 
-            minus.setOnAction(ev -> {
+
+            // 삭제버튼
+            Button deleteBtn = new Button("X");
+            deleteBtn.setStyle("-fx-font-size: 14px; -fx-text-fill: red;");
+            deleteBtn.setOnAction(e -> {
+            cartItems.remove(item); // 장바구니에서 제거
+            cartVBox.getChildren().remove(card); // UI에서 메뉴 카드 제거
+            });
+
+
+
+            minus.setOnAction(ev -> { // 없애기
                 int count = Integer.parseInt(countLabel.getText());
                 if (count > 0) {
                     countLabel.setText(String.valueOf(--count));
                 }
             });
 
-            plus.setOnAction(ev -> {
+            plus.setOnAction(ev -> { // 추가
                 int count = Integer.parseInt(countLabel.getText());
                 countLabel.setText(String.valueOf(++count));
             });
 
-            HBox quantityBox = new HBox(5, minus, countLabel, plus);
+            HBox quantityBox = new HBox(5, minus, countLabel, plus, deleteBtn);
 
             VBox infoBox = new VBox(5, nameLabel, quantityBox);
             card.getChildren().addAll(imageView, infoBox);
