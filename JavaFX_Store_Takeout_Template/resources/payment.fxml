@@ -67,7 +67,7 @@
     <AnchorPane layoutX="361.0" layoutY="341.0" prefHeight="122" prefWidth="412">
         <Pane fx:id="cardPayment" layoutX="7.0" layoutY="6.0" onMouseClicked="#cpClicked">
             <children>
-                <Rectangle accessibleRole="BUTTON" fill="#D9D9D9" height="110" width="190" />
+                <Rectangle fill="#D9D9D9" height="110" width="190" />
                 <Label layoutX="13.0" layoutY="8.0" 
                        style="-fx-font-size: 22px; -fx-font-family: 'NanumGothic'; -fx-font-weight: bold;" 
                        text="카드 결제" />
