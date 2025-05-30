@@ -44,12 +44,13 @@ public class CartController {
             // 수량 조절 버튼 및 라벨
             Button minus = new Button("-");
             Label countLabel = new Label(String.valueOf(item.getQuantity())) ; // 장바구니에서 수량조절하는대로 숫자 바뀜 1로 고정된 거 x
+            countLabel.setStyle("-fx-font-size: 12px;  -fx-font-family: 'NanumGothic';");
             Button plus = new Button("+");
 
 
             // 삭제버튼
             Button deleteBtn = new Button("X");
-            deleteBtn.setStyle("-fx-font-size: 14px; -fx-text-fill: red;");
+            deleteBtn.setStyle("-fx-font-size: 14px; -fx-text-fill: red; -fx-font-family: 'NanumGothic';");
             deleteBtn.setOnAction(e -> {
             cartItems.remove(item); // 장바구니에서 제거
             cartVBox.getChildren().remove(card); // UI에서 메뉴 카드 제거
