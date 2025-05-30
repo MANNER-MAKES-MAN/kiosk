@@ -14,8 +14,13 @@ public class MenuController {
 
     @FXML private Button backButton;
     @FXML private Button cartButton;
+    @FXML private Button nextButton;
     @FXML private Button addIcecoffee;
     @FXML private Button addHotcoffee;
+    @FXML private Button addIcelatte;
+    @FXML private Button addHotlatte;
+    @FXML private Button addIceBlatte;
+    @FXML private Button addHotBlatte;
 
     public static List<CartItem> cartItems = new ArrayList<>();
 
@@ -23,24 +28,33 @@ public class MenuController {
     public void initialize() {
         backButton.setOnAction(e -> switchScene("/TypeSelect.fxml"));
         cartButton.setOnAction(e -> switchScene("/CartView.fxml"));
+        nextButton.setOnAction(e -> switchScene("/payment.fxml"));
 
-        addIcecoffee.setOnAction(e -> {
-            boolean found = false;
-            for (CartItem item : cartItems) {
-                if (item.getName().equals("ICE 아메리카노")) {
-                    item.increaseQuantity();
-                    found = true;
-                    break;
-                }
-            }
-            if (!found) {
-                cartItems.add(new CartItem("ICE 아메리카노", "/icecoffee.png"));
-            }
-            System.out.println("장바구니에 추가됨: ICE 아메리카노");
-        });
+        addIcecoffee.setOnAction(e -> { addToCart ("ICE 아메리카노", "/icecoffee.png", 1500);}); // 아아
 
+        addHotcoffee.setOnAction(e -> { addToCart ("HOT 아메리카노", "/hotcoffee.jpg", 1500 );}); // 뜨아
+
+        addIcelatte.setOnAction(e -> { addToCart ("ICE 카페라떼", "/icelatte.png", 2900 );}); // 아라
+
+        addHotlatte.setOnAction(e -> { addToCart("HOT 카페라떼", "/hotlatte.jpeg", 2900);}); // 뜨라
+
+        addIceBlatte.setOnAction(e -> { addToCart("ICE 바닐라라떼", "/iceBlatte.png", 2900); }); // 아바라
+
+        addHotBlatte.setOnAction(e -> { addToCart("HOT 바닐라라떼", "/hotBlatte.jpeg",2900);}); // 뜨바라
     }
 
+    private void addToCart(String name, String imagePath, int price) {
+    for (CartItem item : cartItems) {
+        if (item.getName().equals(name)) {
+            item.increaseQuantity();
+            System.out.println("수량 증가됨: " + name);
+            return;
+        }
+    } // 메뉴 한번 더 눌렀을 때 수량 증가됨 글이 출력되고 +1 추가됨
+
+    cartItems.add(new CartItem(name, imagePath, price));
+    System.out.println("장바구니에 새로 추가됨: " + name); // 장바구니에 추가
+    }
 
     private void switchScene(String fxmlPath) {
         try {

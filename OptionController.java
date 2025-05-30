@@ -1,4 +1,4 @@
-package Figma_change;
+package app;
 
 import javafx.fxml.FXML;
 import javafx.scene.input.MouseEvent;
