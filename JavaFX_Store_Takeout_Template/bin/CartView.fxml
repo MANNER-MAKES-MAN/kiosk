@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane prefWidth="1920.0" prefHeight="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.CartController">
+
+    <!-- UID Field (숨겨진 상태) -->
+    <TextField fx:id="uidField" promptText="UID를 입력 후 엔터" managed="false"/>
+
+    <children>
+
+        <!-- 상단 텍스트 -->
+        <Label layoutX="50" layoutY="50" 
+               style="-fx-font-size: 40px; -fx-font-family: 'NanumGothic'; -fx-font-weight: normal;" 
+               text="담긴 메뉴" />
+
+        <!-- 구분선 -->
+        <Label layoutX="0" layoutY="900" 
+               style="-fx-font-size: 36px; -fx-font-weight: 100; -fx-text-fill: black;" 
+               text="________________________________________________________________________________________________________________________________________________________________________________________________________________________" />
+
+        <!-- 닫기 버튼 -->
+        <Button fx:id="closeButton" layoutX="60" layoutY="960" 
+                prefWidth="180" prefHeight="80" 
+                style="-fx-font-size: 32px; -fx-font-family: 'NanumGothic'; -fx-font-weight: normal; -fx-background-color: white; -fx-background-radius: 30; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 4, 0, 2, 2);" 
+                text="닫기" />
+
+        <!-- 다음 버튼 -->
+        <Button fx:id="nextButton" layoutX="1680.0" layoutY="960.0" 
+                prefWidth="180" prefHeight="80" 
+                style="-fx-font-size: 32px; -fx-font-family: 'NanumGothic'; -fx-font-weight: normal; -fx-background-color: white; -fx-background-radius: 30; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 4, 0, 2, 2);" 
+                text="다음" />
+
+        <!-- 스크롤 가능한 장바구니 항목 목록 -->
+        <ScrollPane layoutX="50" layoutY="120" prefWidth="1820" prefHeight="750">
+            <content>
+                <VBox fx:id="cartVBox" spacing="20" />
+            </content>
+        </ScrollPane>
+
+    </children>
+</AnchorPane>

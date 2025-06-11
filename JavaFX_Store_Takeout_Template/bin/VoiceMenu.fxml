@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane prefHeight="480.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+   
+       <!-- 2. 메뉴 이미지 카드 시각화 -->
+       <HBox layoutX="100.0" layoutY="100.0" spacing="40">
+           <children>
+               <VBox alignment="CENTER" spacing="10" />
+               <VBox alignment="CENTER" spacing="10" />
+           </children>
+       </HBox>
+      <AnchorPane layoutX="16.0" layoutY="83.0" prefHeight="315.0" prefWidth="768.0" style="-fx-background-color: white; -fx-background-radius: 30;                        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 4, 0, 0, 2);">
+         <children>
+            <VBox alignment="CENTER" layoutX="40.0" layoutY="15.0" spacing="5">
+               <children>
+                  <ImageView fitHeight="80" fitWidth="80" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icecoffee.png" />
+                     </image>
+                  </ImageView>
+                  <Label style="-fx-font-size: 14px; -fx-font-family: 'NanumGothic'; -fx-font-weight:normal;" text="ICE 아메리카노" />
+                  <Label style="-fx-font-size: 13px; -fx-font-family: 'NanumGothic'; -fx-text-fill: #555;" text="₩1500" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="148.0" layoutY="15.0" spacing="5">
+               <children>
+                  <ImageView fitHeight="80" fitWidth="80" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@hotcoffee.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label style="-fx-font-size: 14px; -fx-font-family: 'NanumGothic'; -fx-font-weight: normal;" text="HOT 아메리카노" />
+                  <Label style="-fx-font-size: 13px; -fx-font-family: 'NanumGothic'; -fx-text-fill: #555;" text="₩1500" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="272.0" layoutY="15.0" spacing="5">
+               <children>
+                  <ImageView fitHeight="80" fitWidth="80" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icelatte.png" />
+                     </image>
+                  </ImageView>
+                  <Label style="-fx-font-size: 14px; -fx-font-family: 'NanumGothic'; -fx-font-weight: normal;" text="ICE 카페라떼" />
+                  <Label style="-fx-font-size: 13px; -fx-font-family: 'NanumGothic'; -fx-text-fill: #555;" text="₩2900" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="384.0" layoutY="15.0" spacing="5">
+               <children>
+                  <ImageView fitHeight="80" fitWidth="80" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@hotlatte.jpeg" />
+                     </image>
+                  </ImageView>
+                  <Label style="-fx-font-size: 14px; -fx-font-family: 'NanumGothic'; -fx-font-weight: normal;" text="HOT 카페라떼" />
+                  <Label style="-fx-font-size: 13px; -fx-font-family: 'NanumGothic'; -fx-text-fill: #555;" text="₩2900" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="502.0" layoutY="15.0" spacing="5">
+               <children>
+                  <ImageView fitHeight="80" fitWidth="80" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@iceBlatte.png" />
+                     </image>
+                  </ImageView>
+                  <Label style="-fx-font-size: 14px; -fx-font-family: 'NanumGothic'; -fx-font-weight: normal;" text="ICE 바닐라라떼" />
+                  <Label style="-fx-font-size: 13px; -fx-font-family: 'NanumGothic'; -fx-text-fill: #555;" text="₩2900" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="620.0" layoutY="15.0" spacing="5">
+               <children>
+                  <ImageView fitHeight="80" fitWidth="80" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@hotBlatte.jpeg" />
+                     </image>
+                  </ImageView>
+                  <Label style="-fx-font-size: 14px; -fx-font-family: 'NanumGothic'; -fx-font-weight: normal;" text="HOT 바닐라라떼" />
+                  <Label style="-fx-font-size: 13px; -fx-font-family: 'NanumGothic'; -fx-text-fill: #555;" text="₩2900" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <Label layoutX="256.0" layoutY="30.0" style="-fx-font-size: 36px; -fx-font-family: 'NanumGothic'; -fx-font-weight: normal; -fx-text-fill: black;" text="메뉴를 선택해주세요" />
+   </children>
+</AnchorPane>

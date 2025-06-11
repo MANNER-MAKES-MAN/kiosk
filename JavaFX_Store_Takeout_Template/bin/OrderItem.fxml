@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+
+<HBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml" fx:controller="app.OrderItemController"
+      spacing="20" prefHeight="60" prefWidth="1280" alignment="CENTER_LEFT" style="-fx-padding: 10px;">
+    
+    <!-- 메뉴 이름 -->
+    <Label fx:id="menuNameLabel" prefWidth="300" style="-fx-font-size: 20px;" />
+
+    <!-- 옵션 버튼 -->
+    <Pane fx:id="optionBtn" prefWidth="80" prefHeight="30" onMouseClicked="#handleOptionClick">
+        <children>
+            <Rectangle width="80" height="30" arcWidth="10" arcHeight="10" fill="#E0E0E0"/>
+            <Label text="옵션" layoutX="20" layoutY="7" style="-fx-font-size: 14px;"/>
+        </children>
+    </Pane>
+
+    <!-- 수량 조절 -->
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="minusBtn" text="-" prefWidth="40" prefHeight="30" />
+        <Label fx:id="quantityLabel" text="1개" style="-fx-font-size: 16px;" />
+        <Button fx:id="plusBtn" text="+" prefWidth="40" prefHeight="30" />
+    </HBox>
+
+    <!-- 가격 -->
+    <Label fx:id="priceLabel" prefWidth="150" alignment="CENTER_RIGHT"
+           style="-fx-font-size: 18px; -fx-text-fill: #333333;" />
+    
+    <!-- 여유 공간 비율 확장 -->
+    <Region HBox.hgrow="ALWAYS"/>
+</HBox>

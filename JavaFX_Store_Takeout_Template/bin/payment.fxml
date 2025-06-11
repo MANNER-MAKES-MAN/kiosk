@@ -1,0 +1,71 @@
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.PaymentController">
+   <!-- ✅ uidField -->
+   <TextField fx:id="uidField" layoutX="1276.8" layoutY="765.0" prefWidth="456.0" prefHeight="90.0" promptText="결제 코드 입력" managed="false" />
+   <children>
+       <!-- 상단 텍스트 -->
+       <Label layoutX="808.8" layoutY="42.75" style="-fx-font-size: 48px; -fx-font-family: 'NanumGothic'; -fx-text-fill: black;" text="주문 내역 확인" />
+
+       <!-- 이전 버튼 -->
+       <Button layoutX="64.8" layoutY="36.0" onAction="#goBack" style="-fx-font-size: 38.4px; -fx-font-family: 'NanumGothic';" text="이전" />
+
+       <!-- 주문 내역 영역 -->
+       <ScrollPane layoutX="38.4" layoutY="135.0" prefHeight="922.5" prefWidth="1838.4">
+         <content>
+              <AnchorPane fx:id="orderPane" prefHeight="955.0" prefWidth="1797.6">
+                 <children>
+                     <!-- 상단 타이틀 -->
+                     <Rectangle fill="#D9D9D9" height="105.75" layoutX="26.4" layoutY="33.6" width="1106.4" />
+                     <Label layoutX="69.6" layoutY="57.6" style="-fx-font-size: 52.8px; -fx-font-family: 'NanumGothic'; -fx-font-weight: normal;" text="주문 내역" />
+                     <Label layoutX="727.2" layoutY="57.6" style="-fx-font-size: 52.8px; -fx-font-family: 'NanumGothic'; -fx-font-weight: normal;" text="수량" />
+                     <Label layoutX="961.2" layoutY="57.6" style="-fx-font-size: 52.8px; -fx-font-family: 'NanumGothic'; -fx-font-weight: normal;" text="금액" />
+
+                     <!-- 총합 타이틀 -->
+                     <Rectangle fill="#D9D9D9" height="105.75" layoutX="26.4" layoutY="774.0" width="1104.0" />
+                     <Label layoutX="69.6" layoutY="795.6" style="-fx-font-size: 52.8px; -fx-font-family: 'NanumGothic'; -fx-font-weight: normal; -fx-text-fill: #4F4F4F;" text="결제 금액" />
+
+                     <!-- ✅ 총합 표시 Label -->
+                     <Label fx:id="totalAmountLabel" layoutX="943.2" layoutY="804.0" style="-fx-font-size: 43.2px; -fx-font-family: 'NanumGothic'; -fx-text-fill: #4F4F4F;" text="원" />
+
+                     <!-- ✅ 장바구니 항목 동적 표시 VBox -->
+                     <VBox fx:id="paymentListBox" layoutX="24.0" layoutY="144.0" prefWidth="960.0" spacing="19.2" />
+
+                     <!-- 카드 결제 -->
+                     <Pane fx:id="cardPayment" layoutX="1276.8" layoutY="213.6" onMouseClicked="#cpClicked">
+                        <children>
+                            <Rectangle fill="#D9D9D9" height="264.0" width="456.0" />
+                            <Label layoutX="31.2" layoutY="19.2" style="-fx-font-size: 52.8px; -fx-font-family: 'NanumGothic'; -fx-font-weight: bold;" text="카드 결제" />
+                            <Label layoutX="31.2" layoutY="216.0" style="-fx-font-size: 26.4px; -fx-font-family: 'NanumGothic'; -fx-font-weight: bold;" text="신용 카드/삼성 페이" />
+                        </children>
+                    </Pane>
+
+                     <!-- 간편 결제 -->
+                     <Pane fx:id="simplePayment" layoutX="1276.8" layoutY="514.8" onMouseClicked="#spClicked" prefHeight="252.0" prefWidth="453.6">
+                        <children>
+                            <Rectangle fill="#D9D9D9" height="264.0" width="456.0" />
+                            <Label layoutX="31.2" layoutY="19.2" style="-fx-font-size: 52.8px; -fx-font-family: 'NanumGothic'; -fx-font-weight: bold;" text="간편 결제" />
+                            <Label layoutX="31.2" layoutY="158.4" style="-fx-font-size: 26.4px; -fx-font-family: 'NanumGothic'; -fx-font-weight: bold;" text="네이버 페이 / 카카오 페이 / 삼성 페이" />
+                            <AnchorPane layoutX="-12.0" layoutY="-12.0" prefHeight="261.6" prefWidth="472.8" />
+                        </children>
+                    </Pane>
+
+                     <!-- 🎤 음성 결제 버튼 -->
+                     <Button fx:id="voiceTestButton" layoutX="1276.8" layoutY="48.0" prefHeight="105.6" prefWidth="456.0" style="-fx-font-size: 38.4px; -fx-font-family: 'NanumGothic'; -fx-font-weight: normal; -fx-background-color: #eeeeee;" text="🎤 결제를 완료해주세요" />
+                 </children>
+              </AnchorPane>
+         </content>
+       </ScrollPane>
+   </children>
+</AnchorPane>
