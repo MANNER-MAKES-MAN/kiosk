@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="1080.0" prefWidth="1920.0" spacing="20" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.TypeSelectController">
+   <!--UID Field-->
+         <TextField fx:id="uidField" managed="false" promptText="UID를 입력 후 엔터" />
+         
+   <children>
+   
+       <!-- 상단에 음성인식 버튼 -->
+       <Button fx:id="voiceTestButton" prefHeight="57.0" prefWidth="484.0" style="-fx-font-size: 30px; -fx-font-family: 'NanumGothic'; -fx-font-weight: normal; -fx-background-color: #eeeeee;" text="🎤 음성인식 테스트" />
+   
+       <!-- 포장/매장 버튼 두 개를 HBox에 배치 -->
+       <HBox alignment="CENTER" spacing="50" VBox.vgrow="ALWAYS">
+      <children>
+              <Button fx:id="storeButton" prefHeight="600.0" prefWidth="600.0" style="-fx-font-size: 60; -fx-font-family: 'NanumGothic'; -fx-font-weight: normal; -fx-background-color: white; -fx-background-radius: 30; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 4, 0, 1, 1);" text="매장" />
+              <Button fx:id="takeoutButton" prefHeight="600.0" prefWidth="600.0" style="-fx-font-size: 60px; -fx-font-family: 'NanumGothic'; -fx-font-weight: normal; -fx-background-color: white; -fx-background-radius: 30; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 4, 0, 1, 1);" text="포장" />
+      </children>
+       </HBox>
+   </children>
+
+</VBox>

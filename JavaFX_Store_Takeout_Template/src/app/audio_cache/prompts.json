@@ -1,0 +1,78 @@
+{
+  "ask_menu": {
+    "text": "원하시는 메뉴를 하나만 말해주세요",
+    "wav": "c:\\Users\\Ryan_Laptop\\Desktop\\Caps\\kiosk_final\\JavaFX_Store_Takeout_Template\\src\\app\\audio_cache\\ask_menu.wav"
+  },
+  "ask_more": {
+    "text": "다른 메뉴를 추가 하시겠습니까? 없으면 주문 완료, 있으면 메뉴를 하나만 말씀해주세요",
+    "wav": "c:\\Users\\Ryan_Laptop\\Desktop\\Caps\\kiosk_final\\JavaFX_Store_Takeout_Template\\src\\app\\audio_cache\\ask_more.wav"
+  },
+  "ask_done": {
+    "text": "주문이 완료되었습니다. 이제 결제를 진행해주세요",
+    "wav": "c:\\Users\\Ryan_Laptop\\Desktop\\Caps\\kiosk_final\\JavaFX_Store_Takeout_Template\\src\\app\\audio_cache\\ask_done.wav"
+  },
+  "menu_아메리카노": {
+    "text": "아메리카노",
+    "wav": "c:\\Users\\Ryan_Laptop\\Desktop\\Caps\\kiosk_final\\JavaFX_Store_Takeout_Template\\src\\app\\audio_cache\\menu_아메리카노.wav"
+  },
+  "menu_카페라떼": {
+    "text": "카페라떼",
+    "wav": "c:\\Users\\Ryan_Laptop\\Desktop\\Caps\\kiosk_final\\JavaFX_Store_Takeout_Template\\src\\app\\audio_cache\\menu_카페라떼.wav"
+  },
+  "menu_아이스티": {
+    "text": "아이스티",
+    "wav": "c:\\Users\\Ryan_Laptop\\Desktop\\Caps\\kiosk_final\\JavaFX_Store_Takeout_Template\\src\\app\\audio_cache\\menu_아이스티.wav"
+  },
+  "menu_핫초코": {
+    "text": "핫초코",
+    "wav": "c:\\Users\\Ryan_Laptop\\Desktop\\Caps\\kiosk_final\\JavaFX_Store_Takeout_Template\\src\\app\\audio_cache\\menu_핫초코.wav"
+  },
+  "menu_에이드": {
+    "text": "에이드",
+    "wav": "c:\\Users\\Ryan_Laptop\\Desktop\\Caps\\kiosk_final\\JavaFX_Store_Takeout_Template\\src\\app\\audio_cache\\menu_에이드.wav"
+  },
+  "menu_스무디": {
+    "text": "스무디",
+    "wav": "c:\\Users\\Ryan_Laptop\\Desktop\\Caps\\kiosk_final\\JavaFX_Store_Takeout_Template\\src\\app\\audio_cache\\menu_스무디.wav"
+  },
+  "ask_qty": {
+    "text": "몇 개 주문하시겠습니까?",
+    "wav": "c:\\Users\\Ryan_Laptop\\Desktop\\Caps\\kiosk_final\\JavaFX_Store_Takeout_Template\\src\\app\\audio_cache\\ask_qty.wav"
+  },
+  "confirm_qty_1": {
+    "text": "1개 주문이 추가되었습니다",
+    "wav": "c:\\Users\\Ryan_Laptop\\Desktop\\Caps\\kiosk_final\\JavaFX_Store_Takeout_Template\\src\\app\\audio_cache\\confirm_qty_1.wav"
+  },
+  "confirm_qty_2": {
+    "text": "2개 주문이 추가되었습니다",
+    "wav": "c:\\Users\\Ryan_Laptop\\Desktop\\Caps\\kiosk_final\\JavaFX_Store_Takeout_Template\\src\\app\\audio_cache\\confirm_qty_2.wav"
+  },
+  "confirm_qty_3": {
+    "text": "3개 주문이 추가되었습니다",
+    "wav": "c:\\Users\\Ryan_Laptop\\Desktop\\Caps\\kiosk_final\\JavaFX_Store_Takeout_Template\\src\\app\\audio_cache\\confirm_qty_3.wav"
+  },
+  "confirm_qty_4": {
+    "text": "4개 주문이 추가되었습니다",
+    "wav": "c:\\Users\\Ryan_Laptop\\Desktop\\Caps\\kiosk_final\\JavaFX_Store_Takeout_Template\\src\\app\\audio_cache\\confirm_qty_4.wav"
+  },
+  "confirm_qty_5": {
+    "text": "5개 주문이 추가되었습니다",
+    "wav": "c:\\Users\\Ryan_Laptop\\Desktop\\Caps\\kiosk_final\\JavaFX_Store_Takeout_Template\\src\\app\\audio_cache\\confirm_qty_5.wav"
+  },
+  "confirm_qty_6": {
+    "text": "6개 주문이 추가되었습니다",
+    "wav": "c:\\Users\\Ryan_Laptop\\Desktop\\Caps\\kiosk_final\\JavaFX_Store_Takeout_Template\\src\\app\\audio_cache\\confirm_qty_6.wav"
+  },
+  "confirm_qty_7": {
+    "text": "7개 주문이 추가되었습니다",
+    "wav": "c:\\Users\\Ryan_Laptop\\Desktop\\Caps\\kiosk_final\\JavaFX_Store_Takeout_Template\\src\\app\\audio_cache\\confirm_qty_7.wav"
+  },
+  "confirm_qty_8": {
+    "text": "8개 주문이 추가되었습니다",
+    "wav": "c:\\Users\\Ryan_Laptop\\Desktop\\Caps\\kiosk_final\\JavaFX_Store_Takeout_Template\\src\\app\\audio_cache\\confirm_qty_8.wav"
+  },
+  "confirm_qty_9": {
+    "text": "9개 주문이 추가되었습니다",
+    "wav": "c:\\Users\\Ryan_Laptop\\Desktop\\Caps\\kiosk_final\\JavaFX_Store_Takeout_Template\\src\\app\\audio_cache\\confirm_qty_9.wav"
+  }
+}

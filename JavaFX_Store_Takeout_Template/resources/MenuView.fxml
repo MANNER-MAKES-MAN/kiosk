@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.TextField?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.MenuController">
+   <!--UID Field-->
+      <TextField fx:id="uidField" managed="false" promptText="UID를 입력 후 엔터" />
+   
+   <children>
+      
+   
+       <!-- 제목 -->
+       <Label layoutX="867.0" layoutY="42.0" style="-fx-font-size: 50; -fx-font-family: 'NanumGothic'; -fx-font-weight: normal; -fx-text-fill: black;" text="메뉴를 선택해주세요" />
+   
+       <!-- '이전' 버튼 -->
+       <Button fx:id="backButton" layoutX="16.0" layoutY="1020.0" prefHeight="39" prefWidth="84" style="-fx-font-size: 24px; -fx-font-family: 'NanumGothic'; -fx-font-weight: normal;                    -fx-background-color: white; -fx-background-radius: 30;                    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 4, 0, 1, 1);" text="이전" />
+   
+       <!-- '다음' 버튼 -->
+       <Button fx:id="nextButton" layoutX="1822.0" layoutY="1020.0" prefHeight="39" prefWidth="84" style="-fx-font-size: 24px; -fx-font-family: 'NanumGothic'; -fx-font-weight: normal;                    -fx-background-color: white; -fx-background-radius: 30;                    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 4, 0, 1, 1);" text="다음" />
+   
+       <!-- 장바구니 버튼 -->
+       <Button fx:id="cartButton" layoutX="1701.0" layoutY="20.0" prefHeight="89.0" prefWidth="197.0" style="-fx-font-size: 30; -fx-font-family: 'NanumGothic'; -fx-font-weight: normal; -fx-background-color: white; -fx-background-radius: 30; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 4, 0, 1, 1);" text="장바구니" />
+   
+       <!-- 메뉴 카드: ICE 아메리카노 예시 -->
+       <AnchorPane layoutX="156.0" layoutY="234.0" prefHeight="738.0" prefWidth="1608.0" style="-fx-background-color: white; -fx-background-radius: 30;                        -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.25), 4, 0, 0, 2);">
+      <children>
+              <VBox alignment="CENTER" layoutX="26.0" layoutY="79.0" spacing="5">
+                 <children>
+                     <ImageView fitHeight="287.0" fitWidth="251.0" pickOnBounds="true" preserveRatio="true">
+                         <image>
+                             <Image url="@icecoffee.png" />
+                         </image>
+                     </ImageView>
+                     <Label style="-fx-font-size: 14px; -fx-font-family: 'NanumGothic'; -fx-font-weight:normal;" text="아메리카노" />
+                     <Label style="-fx-font-size: 13px; -fx-font-family: 'NanumGothic'; -fx-text-fill: #555;" text="₩1500" />
+                     <Button fx:id="addAmericano" style="-fx-font-size: 13px; -fx-font-family: 'NanumGothic'; -fx-background-color: #f2f2f2; -fx-border-radius: 10;" text="추가" />
+                 </children>
+              </VBox>
+            <VBox alignment="CENTER" layoutX="252.0" layoutY="75.0" spacing="5">
+               <children>
+                  <ImageView fitHeight="285.0" fitWidth="259.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@icelatte.png" />
+                     </image>
+                  </ImageView>
+                  <Label style="-fx-font-size: 14px; -fx-font-family: 'NanumGothic'; -fx-font-weight: normal;" text="카페라떼" />
+                  <Label style="-fx-font-size: 13px; -fx-font-family: 'NanumGothic'; -fx-text-fill: #555;" text="₩1500" />
+                  <Button fx:id="addCafeLatte" style="-fx-font-size: 13px; -fx-font-family: 'NanumGothic'; -fx-background-color: #f2f2f2; -fx-border-radius: 10;" text="추가" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="480.0" layoutY="56.0" spacing="5">
+               <children>
+                  <ImageView fitHeight="321.0" fitWidth="275.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@IceTea.png" />
+                     </image>
+                  </ImageView>
+                  <Label style="-fx-font-size: 14px; -fx-font-family: 'NanumGothic'; -fx-font-weight: normal;" text="아이스티" />
+                  <Label style="-fx-font-size: 13px; -fx-font-family: 'NanumGothic'; -fx-text-fill: #555;" text="₩2900" />
+                  <Button fx:id="addIceTea" style="-fx-font-size: 13px; -fx-font-family: 'NanumGothic'; -fx-background-color: #f2f2f2; -fx-border-radius: 10;" text="추가" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="724.0" layoutY="57.0" spacing="5">
+               <children>
+                  <ImageView fitHeight="279.0" fitWidth="273.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@HotChoco.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label style="-fx-font-size: 14px; -fx-font-family: 'NanumGothic'; -fx-font-weight: normal;" text="핫초코" />
+                  <Label style="-fx-font-size: 13px; -fx-font-family: 'NanumGothic'; -fx-text-fill: #555;" text="₩2900" />
+                  <Button fx:id="addHotChoco" style="-fx-font-size: 13px; -fx-font-family: 'NanumGothic'; -fx-background-color: #f2f2f2; -fx-border-radius: 10;" text="추가" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="1038.0" layoutY="59.0" spacing="5">
+               <children>
+                  <ImageView fitHeight="359.0" fitWidth="268.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Ade.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label style="-fx-font-size: 14px; -fx-font-family: 'NanumGothic'; -fx-font-weight: normal;" text="에이드" />
+                  <Label style="-fx-font-size: 13px; -fx-font-family: 'NanumGothic'; -fx-text-fill: #555;" text="₩2900" />
+                  <Button fx:id="addAde" style="-fx-font-size: 13px; -fx-font-family: 'NanumGothic'; -fx-background-color: #f2f2f2; -fx-border-radius: 10;" text="추가" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="1306.0" layoutY="52.0" prefHeight="356.0" prefWidth="225.0" spacing="5">
+               <children>
+                  <ImageView fitHeight="282.0" fitWidth="257.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Smoothie.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label style="-fx-font-size: 14px; -fx-font-family: 'NanumGothic'; -fx-font-weight: normal;" text="스무디" />
+                  <Label style="-fx-font-size: 13px; -fx-font-family: 'NanumGothic'; -fx-text-fill: #555;" text="₩2900" />
+                  <Button fx:id="addSmoothie" style="-fx-font-size: 13px; -fx-font-family: 'NanumGothic'; -fx-background-color: #f2f2f2; -fx-border-radius: 10;" text="추가" />
+               </children>
+            </VBox>
+      </children>
+       </AnchorPane>
+   </children>
+
+    <!-- 나머지 메뉴 카드들은 복사해서 추가 가능 -->
+
+</AnchorPane>
