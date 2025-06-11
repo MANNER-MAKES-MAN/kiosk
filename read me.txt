@@ -1,0 +1,21 @@
+read me
+
+vscode 경로 설정 자기한테 맞는 Database 경로설정
+-------------------------------------------------------------------
+vscode에서
+ctrl + shift + p 검색기 입력 -> reload window -> 컴파일.
+(src/app 폴더에 있는 java 파일과 resources에 있는 fxml 파일을 bin 폴더에 .class 파일로 추출하는 과정.)
+-------------------------------------------------------------------
+
+주요 pip 패키지 및 버전
+- TTS==0.22.0          # Coqui TTS
+- torch==2.0.0         # TTS 0.22.0과 호환
+- torchaudio==2.0.1    # torch 2.0.0과 호환
+- numpy==1.24.4        # 안정적 작동 확인
+- soundfile            # wav 파일 입출력 지원
+- pydub                # 오디오 처리 및 재생
+
+-------------------------------------------------------------------
+설치 명령어 요약
+pip install torch==2.0.0 torchaudio==2.0.1 numpy==1.24.4 soundfile pydub
+pip install git+https://github.com/coqui-ai/TTS.git@main
